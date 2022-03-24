@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>IOT Nhóm 1</header>
+    <section>
+      <div class="show-info">
+        <h1>Giao diện hiển thị</h1>
+        <hr />
+        <p style="display: inline">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1683988/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </p>
+        <p style="display: inline">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1683999/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </p>
+        <p style="display: inline">
+          <iframe
+            width="450"
+            height="260"
+            style="border: 1px solid #cccccc"
+            src="https://thingspeak.com/channels/1683943/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+          ></iframe>
+        </p>
+        <p style="display: inline">
+          <iframe
+            width="450"
+            height="260"
+            style="border: 1px solid #cccccc"
+            src="https://thingspeak.com/channels/1683943/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+          ></iframe>
+        </p>
+        <h1>Giao diện điều khiển</h1>
+        <div class="controllers">
+            <span style="display: block; margin: 10px 0; font-size: 19px;">Điều khiển LED</span>
+            <button id="ON">ON</button>
+            <button id="OFF">OFF</button>
+            <span style="display: block; margin: 10px 0; font-size: 19px;">Chọn chế độ</span>
+          <button id="auto">Auto</button>
+          <button id="manual">Manual</button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./app.js"></script>
+</html>
