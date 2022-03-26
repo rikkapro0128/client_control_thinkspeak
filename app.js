@@ -1,7 +1,5 @@
 let btnOn = document.getElementById('ON');
 let btnOff = document.getElementById('OFF');
-let temp = document.getElementById('temp');
-let humi = document.getElementById('humi');
 let auto = document.getElementById('auto');
 let manual = document.getElementById('manual');
 
@@ -29,25 +27,25 @@ let urlReadMode = `https://api.thingspeak.com/channels/${channels_id_3}/feeds/la
     }
 })()
 
-btnOn.onclick = async function() {
-    await requestURL(urlLED + '1', 'POST');
-}
+btnOn.addEventListener('click', async function() {
+  await requestURL(urlLED + '1', 'POST');
+})
 
-btnOff.onclick = async function() {
-    await requestURL(urlLED + '0', 'POST');
-}
+btnOff.addEventListener('click', async function() {
+  await requestURL(urlLED + '0', 'POST');
+})
 
-auto.onclick = async function() {
-    await requestURL(urlWriteMode + '1', 'POST');
-    manual.classList.add('dark')
-    this.classList.remove('dark')
-}
+auto.addEventListener('click', async function() {
+  await requestURL(urlWriteMode + '1', 'POST');
+  manual.classList.add('dark')
+  this.classList.remove('dark')
+})
 
-manual.onclick = async function() {
-    await requestURL(urlWriteMode + '0', 'POST');
-    auto.classList.add('dark')
-    this.classList.remove('dark')
-}
+manual.addEventListener('click', async function() {
+  await requestURL(urlWriteMode + '0', 'POST');
+  auto.classList.add('dark')
+  this.classList.remove('dark')
+})
 
 async function requestURL(url, method) {
     const res = await fetch(url, {  method: method });
